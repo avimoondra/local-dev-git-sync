@@ -3,4 +3,4 @@ pageUuid: 66280cf6-51f2-11ec-97e3-2f2640215e6e
 appTemplate:
   plugins:
     ordered: []
-  version: ''
+  version: 2.80.16
