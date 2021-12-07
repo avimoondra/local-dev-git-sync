@@ -1,0 +1,35 @@
+version: 43.0.9
+pageUuid: 462419d0-5798-11ec-869b-4b05be32064e
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: RESTQuery
+            resourceName: REST-WithoutResource
+            template:
+              queryRefreshTime: ''
+              body: ''
+              queryDisabledMessage: ''
+              successMessage: ''
+              queryDisabled: ''
+              resourceNameOverride: ''
+              runWhenModelUpdates: true
+              headers: ''
+              query: https://httpbin.org/get
+              privateParams: []
+              data: null
+              showSuccessToaster: true
+              cookies: ''
+              confirmationMessage: null
+              watchedParams: []
+              timestamp: 0
+              runWhenPageLoads: false
+              queryTimeout: '10001'
+              requireConfirmation: false
+              type: GET
+              bodyType: json
+              queryThrottleTime: '750'
+  version: ''
