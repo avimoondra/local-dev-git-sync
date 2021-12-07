@@ -1,0 +1,185 @@
+version: 43.0.9
+pageUuid: c98521bc-1b1f-11ec-9a72-47648a4a5722
+appTemplate:
+  plugins:
+    ordered:
+      - image1:
+          pluginTemplate:
+            id: image1
+            type: widget
+            subtype: ImageWidget2
+            resourceName: null
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: center
+                - srcWidth: null
+                - src: https://place-puppy.com/400x300
+                - hidden: false
+                - srcHeight: null
+                - fit: cover
+                - aspectRatio: null
+                - storageBlobId: ''
+                - altText: ''
+                - dbBlobId: ''
+                - srcType: src
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 11
+                height: 3
+                width: 1
+            createdAt: 2021-09-21T21:08:59.947Z
+      - image2:
+          pluginTemplate:
+            id: image2
+            type: widget
+            subtype: ImageWidget2
+            resourceName: null
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: center
+                - srcWidth: null
+                - src: https://place-puppy.com/400x300
+                - hidden: false
+                - srcHeight: null
+                - fit: cover
+                - aspectRatio: null
+                - storageBlobId: ''
+                - altText: ''
+                - dbBlobId: ''
+                - srcType: src
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2
+                col: 9
+                height: 3
+                width: 2
+            createdAt: 2021-09-21T21:11:37.148Z
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: null
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2021-09-21T21:06:30.307Z
+      - textInput1:
+          pluginTemplate:
+            id: textInput1
+            type: widget
+            subtype: TextInputWidget2
+            resourceName: null
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - value: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - autoCapitalize: none
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2
+                height: 1
+                width: 4
+            createdAt: 2021-09-21T21:07:42.853Z
+  version: 2.76.18
