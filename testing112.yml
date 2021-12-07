@@ -1,0 +1,247 @@
+version: 43.0.9
+pageUuid: 3fef16ca-d4f6-11eb-af79-f3bc88507421
+appTemplate:
+  plugins:
+    ordered:
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Submit
+                - exportQuery: ''
+                - action: ''
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.8
+                col: 8
+                height: 1
+                width: 2
+            createdAt: 2021-06-24T14:13:30.146Z
+      - button2:
+          pluginTemplate:
+            id: button2
+            type: widget
+            subtype: ButtonWidget
+            resourceName: null
+            template:
+              ordered:
+                - valueToCopy: ''
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Submit
+                - exportQuery: ''
+                - action: ''
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 8
+                height: 1
+                width: 2
+            createdAt: 2021-07-09T16:10:05.233Z
+      - button3:
+          pluginTemplate:
+            id: button3
+            type: widget
+            subtype: ButtonWidget
+            resourceName: null
+            template:
+              ordered:
+                - valueToCopy: ''
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Submit
+                - exportQuery: ''
+                - action: ''
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.4
+                col: 8
+                height: 1
+                width: 2
+            createdAt: 2021-07-09T16:12:45.695Z
+      - chart1:
+          pluginTemplate:
+            id: chart1
+            type: widget
+            subtype: PlotlyChartWidget
+            resourceName: null
+            template:
+              ordered:
+                - dataseries:
+                    ordered:
+                      - '0':
+                          ordered:
+                            - label: statusCode
+                            - datasource: '{{query1.data[''statusCode'']}}'
+                            - chartType: bar
+                            - aggregationType: sum
+                            - color: '#033663'
+                            - colors:
+                                ordered: []
+                            - visible: true
+                            - hovertemplate: >-
+                                <b>%{x}</b><br>%{fullData.name}:
+                                %{y}<extra></extra>
+                - isDataTemplateDirty: false
+                - datasource: ''
+                - isJsonTemplateDirty: false
+                - groupByDropdown: ''
+                - datasourceInputMode: javascript
+                - datasourceDataType: object
+                - layout: ''
+                - xAxisDropdown: error
+                - data: ''
+                - isStackSeriesEnabled: false
+                - xAxisTickFormat: ''
+                - skipDatasourceUpdate: false
+                - datasourceJS: '{{query1.data}}'
+                - yAxisTickFormat: ''
+                - datasourcePluginType: null
+                - xAxisType: default
+                - datasourcePluginId: null
+                - legendAlignment: bottom
+                - isLayoutJsonDirty: false
+                - chartType: bar
+                - title: ''
+                - xAxis: '{{query1.data.error}}'
+                - groupByMode: dropdown
+                - onPointSelectQuery: ''
+                - xAxisMode: dropdown
+                - shouldShowLegend: true
+                - yAxisTitle: ''
+                - selectedPoints:
+                    array: []
+                - xAxisTitle: ''
+                - groupByJS: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.2
+                col: 1
+                height: 7
+                width: 6
+            createdAt: 2021-08-24T22:38:34.993Z
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQueryUnified
+            resourceName: 300d15a4-df38-4d83-9887-b2fdc061ec0c
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - filterBy: ''
+                - metadata: null
+                - editorMode: sql
+                - actionType: ''
+                - triggersOnFailure: []
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - enableBulkUpdates: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - tableName: ''
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2021-06-24T14:12:47.656Z
+  version: 2.75.4
