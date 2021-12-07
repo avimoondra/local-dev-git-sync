@@ -79,4 +79,30 @@ appTemplate:
                 - updateSetValueDynamically: false
                 - notificationDuration: ''
             createdAt: 2021-12-07T20:00:07.562Z
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget2
+            resourceName: null
+            template:
+              ordered:
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: Button
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - loading: false
+                - disabled: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 9
+                height: 1
+                width: 3
+            createdAt: 2021-12-07T20:00:08.885Z
   version: 2.80.16
