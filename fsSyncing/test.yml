@@ -105,4 +105,55 @@ appTemplate:
                 height: 1
                 width: 3
             createdAt: 2021-12-07T20:00:08.885Z
+      - select1:
+          pluginTemplate:
+            id: select1
+            type: widget
+            subtype: SelectWidget2
+            resourceName: null
+            template:
+              ordered:
+                - showSelectionIndicator: true
+                - values: '[''foo'', ''bar'', ''baz'']'
+                - readOnly: false
+                - iconAfter: ''
+                - inputValue: ''
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showClear: false
+                - tooltipText: ''
+                - labelAlign: left
+                - value: null
+                - allowSearch: true
+                - labelWidth: '33'
+                - placeholder: Select an option
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - allowCustomValue: false
+                - invalid: false
+                - iconBefore: ''
+                - emptyMessage: ''
+                - overlayMaxHeight: null
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - required: false
+                - labels: '{{ self.values.map(_.startCase) }}'
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.8
+                col: 7
+                height: 1
+                width: 4
+            createdAt: 2021-12-07T20:00:11.376Z
   version: 2.80.16
