@@ -1,0 +1,253 @@
+version: 43.0.9
+pageUuid: 64b17f9e-522c-11ec-92cf-2f8f37c1a89b
+appTemplate:
+  plugins:
+    ordered:
+      - appfoo:
+          pluginTemplate:
+            id: appfoo
+            type: globalwidgetprop
+            subtype: GlobalWidgetProp
+            resourceName: null
+            template:
+              ordered:
+                - value: ''
+                - defaultValue: ''
+            createdAt: 2021-11-30T22:25:37.487Z
+      - container1:
+          pluginTemplate:
+            id: container1
+            type: widget
+            subtype: ContainerWidget
+            resourceName: null
+            template:
+              ordered:
+                - title: ''
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - heightType: fixed
+                - overflowType: hidden
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: moduleContainer
+                row: 0.19999999999999996
+                height: 2.8
+                width: 12
+            createdAt: 2021-11-30T22:34:03.967Z
+      - healthCheck:
+          pluginTemplate:
+            id: healthCheck
+            type: datasource
+            subtype: RESTQuery
+            resourceName: f91c0d79-1d13-4b07-a2cd-5e05c0e978a7
+            template:
+              ordered:
+                - queryRefreshTime: '3000'
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: health
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events:
+                    - ordered:
+                        - event: success
+                        - type: state
+                        - method: setValue
+                        - pluginId: state2
+                        - params:
+                            ordered:
+                              - value: 'Health: ✅'
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: failure
+                        - type: state
+                        - method: setValue
+                        - pluginId: state2
+                        - params:
+                            ordered:
+                              - value: 'Health: ❌'
+                        - waitType: debounce
+                        - waitMs: '0'
+                        - enabled: ''
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: >-
+                    [{"condition":"{{healthCheck.metadata.status !=
+                    200}}","message":""}]
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2021-12-01T00:06:55.088Z
+      - healthCheck_text:
+          pluginTemplate:
+            id: healthCheck_text
+            type: widget
+            subtype: TextWidget
+            resourceName: null
+            template:
+              ordered:
+                - horizontalAlign: right
+                - truncateOverflow: false
+                - verticalAlign: center
+                - scrollOverflow: false
+                - tooltipText: ''
+                - value: |2
+                     ## {{state2.value}}
+                - style:
+                    ordered:
+                      - text-background: rgb(255, 255, 255)
+                      - primary-text: ''
+                - renderAsHtml: false
+                - backgroundColor: '#0000'
+                - textColor: '#312929'
+                - renderAsMarkdown: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                col: 8
+                height: 1.8000000000000005
+                width: 4
+            createdAt: 2021-11-16T22:20:24.266Z
+      - minions_text:
+          pluginTemplate:
+            id: minions_text
+            type: widget
+            subtype: TextWidget
+            resourceName: null
+            template:
+              ordered:
+                - horizontalAlign: left
+                - truncateOverflow: false
+                - verticalAlign: center
+                - scrollOverflow: false
+                - tooltipText: ''
+                - value: '# Minions: {{appfoo.value}}'
+                - style:
+                    ordered:
+                      - primary-text: '#cc5248'
+                      - text-background: rgb(255, 255, 255)
+                - renderAsHtml: true
+                - backgroundColor: '#0000'
+                - textColor: '#cc5248'
+                - renderAsMarkdown: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                height: 1.7999999999999998
+                width: 8
+            mobilePosition2:
+              position2:
+                container: matchedSubjects_container
+                height: 1
+                width: 3
+            createdAt: 2019-04-20T04:49:50.631Z
+      - moduleContainer:
+          pluginTemplate:
+            id: moduleContainer
+            type: widget
+            subtype: ModuleContainerWidget
+            template:
+              ordered:
+                - heightType: fixed
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - isGlobalWidgetContainer: true
+                - backgroundColor: white
+                - title: ''
+                - overflowType: hidden
+                - disabled: ''
+            position2:
+              position2:
+                height: 3.4000000000000004
+                width: 12
+            mobilePosition2:
+              position2: {}
+            createdAt: 2021-11-30T22:25:17.753Z
+      - state1:
+          pluginTemplate:
+            id: state1
+            type: state
+            subtype: State
+            resourceName: null
+            template:
+              ordered:
+                - value: null
+            createdAt: 2021-12-01T00:08:45.849Z
+      - state2:
+          pluginTemplate:
+            id: state2
+            type: state
+            subtype: State
+            resourceName: null
+            template:
+              ordered:
+                - value: null
+            createdAt: 2021-12-01T00:09:25.257Z
+  isGlobalWidget: true
+  version: 2.82.11
